@@ -2,14 +2,84 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="./assets/styles/preloader.css" />-->
+    <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/landing.css"-->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/media.css" />
   </head>
   <body>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+      <img src="./assets/Images/blogo.png" alt="Logo" class="logo" />
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="about.html">About</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleNav()">Menu</button>
+    </nav>
+    <!-- Landing Page Section -->
+    <style>
+      /*  */
+    </style>
+    <section class="landing">
+      <div id="article">
+        <ul id="li-items" ></ul>
+      </div>
 
-    
- 
-    <script type="module" src="/main.js"></script>
+      <div id="infobox" style="visibility: hidden"></div>
+
+      <div>
+        <div class="head-search">
+          <h1 class="headings">Items</h1>
+          <form
+            id="search-form"
+            onsubmit="event.preventDefault();search()"
+          >
+            <input id="searchBar" type="text" name="searchBar" placeholder="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+     
+      </div>
+    </section>
+    <!-- Script Imports --> 
+    <!-- <script src="main.js"></script> -->
+    <script src="/assets/scripts/searchItem.js"></script>
+
+    <script src="./assets/scripts/main.js"></script>
+   
+    <script
+      src="https://kit.fontawesome.com/dbc9fe0c4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/scripts/filter.js"></script>
   </body>
 </html>

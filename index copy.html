@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="./assets/styles/preloader.css" />-->
+    <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/landing.css"-->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/media.css" />
+  </head>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+      <img src="./assets/Images/blogo.png" alt="Logo" class="logo" />
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="about.html">About</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleNav()">Menu</button>
+    </nav>
+    <!-- Landing Page Section -->
+    <style>
+      /*  */
+    </style>
+    <section class="landing">
+      <div id="popupbox">
+        <form
+          name="login"
+          onsubmit="event.preventDefault();admin()"
+          id="logForm"
+        >
+          Username:
+          <input name="username" size="14" required />
+          <br />
+          Password:
+          <input name="password" type="password" size="14" required />
+          <button class="admin-btn" type="submit">Login</button><br />
+          <a href="javascript:login('hide');">Close</a>
+        </form>
+      </div>
+
+      <div id="infobox" style="visibility: hidden"></div>
+
+      <div>
+        <div class="head-search">
+          <h1 class="headings">Items</h1>
+          <form
+            id="search-form"
+            onsubmit="event.preventDefault(); searchProducts()"
+          >
+            <input id="search" type="text" name="search" placeholder="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        <div>
+          <ul class="items-scroll" id="li-items">
+            <!-- <li>
+              <div class="product-container" >
+                        <img src="${product.picture}" class="li-image" />
+                        <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
+                        <div class="icon-overlay">
+                         <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
+                          <p id='product_price'>R${product.price}</p>
+                          <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
+                          
+                        </div>
+                        
+                      </div></li> -->
+            <!-- <li>
+              <li>
+                <div class="product-container" >
+                          <img src="${product.picture}" class="li-image" />
+                          <div class="icon-overlay">
+                           <button class="show-info-btn" onclick="info('show', ${ product.id });">Info <i class="fa fa-info-circle"></i></button>
+                            <p id='product_price'>R${product.price}</p>
+                            <p id='product_name'><h3>${product.product_name}</h3></p>
+                            
+                            <button class="addtocart-btn" onclick="addToCart(${ product.id })">ADD TO CART</button>
+                            
+                          </div>
+                          
+                        </div></li>
+             
+            </li> -->
+            <!-- <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+           -->
+          </ul>
+        </div>
+
+        <div class="reciept">
+          <div class="reciept-head">
+            <h3>Reciept</h3>
+            <button class="recCheck" onclick="checkOut()">Check out</button>
+
+            <h3>
+              Total:R
+              <p value="0" class="total-price">0</p>
+            </h3>
+          </div>
+          <ul class="reciept-items" id="cartList"></ul>
+        </div>
+        <div class="control-panel">
+          <h1 class="headings">ControlPanel</h1>
+          <button class="btn-check-out" onclick="checkOut()">Check out</button>
+          <button class="admin-btn btn-check-out" value="ADMIN">
+            <a style="text-decoration: none; color: aliceblue;" href="javascript:login('show');">Admin-login</a>
+          </button>
+          <div class="searchButtons">
+            <h2 class="headings">Search By Brand</h2>
+            <button class="btn-check-out" onclick="getPosts()">All</button>
+            <button class="btn-check-out" onclick="searchBrand('Bob')">
+              Bob
+            </button>
+            <button class="btn-check-out" onclick="searchBrand('Handy')">
+              Handy
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Script Imports -->
+    <script src="./assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/infobox.js"></script>
+    <script src="/assets/scripts/searchItem.js"></script>
+
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/checkout.js"></script>
+    <script
+      src="https://kit.fontawesome.com/dbc9fe0c4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/scripts/filter.js"></script>
+  </body>
+</html>
