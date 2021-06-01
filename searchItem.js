@@ -1,18 +1,16 @@
-import API_KEY from "../.env"
 function searchProducts() {
   // Get data from form
   let form = document.getElementById("search-form");
   let searchTerm = form.getElementsByTagName("input")[0].value;
   // Create Regular Expression
   let searchRegEx = new RegExp(searchTerm, "i");
-  const key = process.env.API_KEY
   // Fetch data to search from
-  fetch(`https://newsapi.org/v2/sources?apiKey=${API_KEY}`)
+  fetch("https://shielded-woodland-34724.herokuapp.com/show-records/")
     .then((response) => response.json())
-    .then((data) => {
+    .then((json) => {
       // Filter data
-      let result = json.filter((sources) => {
-        return sources.category.search(searchRegEx) !== -1;
+      let result = json.filter((product) => {
+        return product.product_name.search(searchRegEx) !== -1;
       });
       // Check if there are found results
       if (result.length > 0) {

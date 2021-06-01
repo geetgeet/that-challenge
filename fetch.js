@@ -1,3 +1,4 @@
+import API_KEY from '.env'
 /* -- FETCH FUNCRIONS--*/
 let products = [];
  async function getPosts() {
@@ -5,7 +6,7 @@ let products = [];
   let list = document.getElementById("li-items");
 
   // Fetch the data
-  await fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=60fcd15748ca4894965746c5aed9d9ef")
+  await fetch(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${API_KEY}`)
     .then((response) => response.json())
     .then((json) => {
       console.log(json.articles);
@@ -17,15 +18,13 @@ let products = [];
     });
 }
 
-function createsaleItem(article) {
+function createsaleItem(product) {
   const listitem = `<li>
   <div class="product-card">
-  <h2>${article.title}</h2>
-      <h5>${article.description}</h5>
-      <img src="${article.urlToImage}" class="fakeimg" style="height:200px;"/>
-      <p>${article.content}</p>
-    </div>
- </li>`;
+  <img src="${product.name}" class="li-image">
+  <p class="price">R${product.description}</p>
+  <p class="stock">Qty ava:${product.category}</p>
+</div></li>`;
   let list = document.getElementById("li-items");
   console.log("Hello");
   list.innerHTML += listitem;

@@ -50,36 +50,40 @@
       /*  */
     </style>
     <section class="landing">
-      <div id="article">
-        <ul id="li-items" ></ul>
-      </div>
-
+      
       <div id="infobox" style="visibility: hidden"></div>
-
+      
       <div>
         <div class="head-search">
           <h1 class="headings">Items</h1>
           <form
-            id="search-form"
-            onsubmit="event.preventDefault();search()"
+          id="search-form"
+          onsubmit="event.preventDefault();searchProducts()"
           >
-            <input id="searchBar" type="text" name="searchBar" placeholder="search" />
-            <button type="submit">Search</button>
-          </form>
-        </div>
-     
+          <input id="searchBar" type="text" name="searchBar" placeholder="search" />
+          <button type="submit">Search</button>
+        </form>
       </div>
+      
+      <div id="article">
+        <ul id="li-items" >
+          <li>here</li>
+        </ul>
+      </div>
+      </div>
+
+
     </section>
     <!-- Script Imports --> 
     <!-- <script src="main.js"></script> -->
-    <script src="/assets/scripts/searchItem.js"></script>
+    <!-- <script src="/scripts/searchItem.js"></script> -->
 
-    <script src="./assets/scripts/main.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/searchItem.js"></script>
    
     <script
       src="https://kit.fontawesome.com/dbc9fe0c4c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/assets/scripts/filter.js"></script>
   </body>
 </html>
