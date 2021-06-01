@@ -56,11 +56,15 @@
       <div>
         <div class="head-search">
           <h1 class="headings">Items</h1>
+
+     
+
           <form
           id="search-form"
           onsubmit="event.preventDefault();searchProducts()"
           >
-          <input id="searchBar" type="text" name="searchBar" placeholder="search" />
+          <input id="searchBar" type="text" name="searchBar" placeholder="main" required />
+          <input id="searchBarKEY" type="text" name="searchBar" placeholder="KEY"  />
           <button type="submit">Search</button>
         </form>
       </div>
