@@ -1,19 +1,17 @@
 /* -- FETCH FUNCRIONS--*/
 let products = [];
-let catagoty=[]
  async function getPosts() {
   // Get element to change
   let list = document.getElementById("li-items");
 
   // Fetch the data
-  await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=60fcd15748ca4894965746c5aed9d9ef")
+   await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=60fcd15748ca4894965746c5aed9d9ef")
     .then((response) => response.json())
     .then((json) => {
-      console.log(json.articles);
+      console.log(json);
       json.articles.forEach(item => {
         products.push(item);
        createsaleItem(item);
-      
       });
       
     });

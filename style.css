@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.logo {
+    height: 8vh;
+    width: 8vw;
+    object-fit: contain;
+    /* width: 100px;
+    height: 100px; */
+    transition: width 2s, height 2s, transform 1s;
+  }
+  .nav-bar h1 {
+      margin: 5px;
+  }
+  .logo:hover {
+    height: 8vh;
+    width: 8vw;
+    transform: rotate(360deg);
+  }
+
+section{
+    height: 100vh;
+    background: #000;
+}
+.headings{
+    color: aliceblue;
+}
+.nav-bar{
+    background-color:orange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

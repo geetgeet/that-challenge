@@ -17,8 +17,9 @@ async function searchProducts() {
   .then((json) => {
     // Filter data
     let result = json.articles.filter((article) => {
-      return article.description.search(searchRegEx) !== -1 & article.title.search(searchRegEx) !== -1 
+      return article
     });
+    console.log(result.length)
     // Check if there are found results
     if (result.length > 0) {
       // Render items that matched
