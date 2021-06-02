@@ -24,7 +24,7 @@ async function searchProducts() {
     if (result.length > 0) {
       // Render items that matched
       document.getElementById("li-items").innerHTML = "";
-      result.forEach((product) => createsaleItem(product));
+      result.forEach((product) => createsearchItem(product));
     } 
     
     else {

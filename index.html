@@ -32,6 +32,7 @@
     />
     </head>
   <body>
+    <div class="wrap">
     <!-- Navigation Section -->
     <!-- <nav class="navbar">
       <img src="./assets/Images/blogo.png" alt="Logo" class="logo" />
@@ -51,35 +52,43 @@
     </nav>
   
     <section class="landing">
-      <div>
-        <div class="head-search">
-          <h1 class="headings">Search</h1>
-          <form
-          id="search-form"
-          onsubmit="event.preventDefault();searchProducts()"
-          >
-          <input id="searchBar" type="text" name="searchBar" placeholder="main" required />
-          <input id="searchBarKEY" type="text" name="searchBar" placeholder="KEY"  />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-    </section>
       <div id="article">
-        <ul id="top-storiea" >
-          <li>here</li>
+        <h1>TOP NEWS</h1>
+        <ul id="top-stories" class="top-stories">
+   
         </ul>
       </div>
-      </div>
+      
+    </section>
+    
+    
+    <div class="head-search">
+      <h1 class="headings">Search</h1>
+      <form
+      id="search-form"
+      onsubmit="event.preventDefault();searchProducts()"
+      >
+      <input id="searchBar" type="text" name="searchBar" placeholder="main" required />
+      <input id="searchBarKEY" type="text" name="searchBar" placeholder="KEY"  />
+      <button type="submit">Search</button>
+    </form>
+</div>
 
 
     <section class="searched">
+      <h1>SEARCH RESULTS</h1>
+      <div id="article">
+        <ul id="li-items" >
+          <li>here</li>
+        </ul>
+      </div>
 
 
     </section>
     <!-- Script Imports --> 
     <!-- <script src="main.js"></script> -->
     <!-- <script src="/scripts/searchItem.js"></script> -->
-
+</div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/searchItem.js"></script>
    
@@ -87,5 +96,6 @@
       src="https://kit.fontawesome.com/dbc9fe0c4c.js"
       crossorigin="anonymous"
     ></script>
+  
   </body>
 </html>

@@ -1,6 +1,9 @@
 *{
     margin: 0;
-    padding:0;
+    padding:1;
+}
+ul li{
+    text-decoration: none;
 }
 .logo {
     height: 8vh;
@@ -21,7 +24,24 @@
 
 section{
     height: 100vh;
-    background: #000;
+    border: black;
+}
+#top-stories{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.top-stories{
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
+    overflow:auto;
+}
+.landing{
+    background-color: blueviolet;
+    max-height: 55vh;
 }
 .headings{
     color: aliceblue;
@@ -31,4 +51,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.searched{
+    background-color: blue;
 }
