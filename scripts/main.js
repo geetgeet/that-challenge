@@ -19,24 +19,30 @@ let products = [];
 
 function createmainItem(article) {
   const listitem = `<li>
-  <div>
-  <div class="product-card">
-  <h2>${article.title}</h2>
+ 
+  <div class="article-card">
+  <h2 class="article-title">${article.title}</h2>
+  <div class="article-cont">
+  <img src="${article.urlToImage}" class="fakeimg" />
+  <div class="description">
+  <h5>${article.description}</h5>
+  <a href="${article.url}" target="_blank"><button>Read More</button>
+  
+  </div>
+  
+  </div>
   <p> By:${article.author}</p>
-      <h5>${article.description}</h5>
-      <img src="${article.urlToImage}" class="fakeimg" style="height:200px;"/>
-      <a href="${article.url}" target="_blank"><button>Read More</button>
     </div>
-    </div>
+   
  </li>`;
   let toplist = document.getElementById("top-stories");
   console.log("Hello");
   toplist.innerHTML += listitem;
 }
-
+// search items
 function createsearchItem(article) {
   const listitem = `<li>
-  <div class="product-card">
+  <div class="article-card">
   <h2>${article.title}</h2>
   <p> By:${article.author}</p>
       <h5>${article.description}</h5>
