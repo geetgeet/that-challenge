@@ -19,7 +19,7 @@ ul li{
   .logo:hover {
     height: 8vh;
     width: 8vw;
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
   }
 
 section{
@@ -27,26 +27,24 @@ section{
     border: black;
     
 }
-.landing{
-    
-}
-#article-top-stories{
-    
-    display:block;
-    
-   
-   
-    max-height:500px;
-    margin:0;
-    background:#abc;
-    overflow-y:auto;
-    overflow-x:hidden;
-    transform:rotate(90deg) ;
-    transform-origin:center;
 
+#article-top-stories{
+    display: block;
+    max-height: 100vh;
+    margin: 0;
+    background: #abc;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* transform: rotate(90deg); */
+    /* transform-origin: center; */
+    /* scroll-behavior:; */
+    /* width: 100vw; */
+    left: 0;
+    
 }
 .top-stories{
     list-style-type: none;
+    left: 0;
     
 
     /* justify-content: space-around; */
@@ -56,7 +54,7 @@ section{
     margin-top: 10px;
     outline: 5px solid red;
     max-height: 70vh;   
-    overflow:auto;
+    overflow:hidden;
     
     /* display: flex;
     flex-wrap: wrap;
@@ -91,7 +89,10 @@ section{
 } */
 .article-card{
     background-color: #bbb;
-    transform:rotate(270deg) ;
+    
+    /* transform:rotate(270deg) ; */
+    /* transform-origin: top left; */
+
 
   }
   .article-cont{
