@@ -1,7 +1,9 @@
 /* -- FETCH FUNCRIONS--*/
 let products = [];
- async function getPosts() {
-  // Get element to change
+
+async function getPosts() {
+  //  console.log(process.env.API_KEY)
+   
   let toplist = document.getElementById("top-stories");
 
   // Fetch the data

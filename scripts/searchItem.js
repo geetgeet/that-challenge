@@ -5,10 +5,11 @@ async function searchProducts() {
   let form = document.getElementById("search-form");
   let searchTerm = form.getElementsByTagName("input")[0].value;
   // let searchTerm = form.getElementsByTagName("input")[0].value.replace(/ /g,'-');
-  let searchTermKey = form.getElementsByTagName("input")[1].value;
+  // let searchTermLanguage = form.getElementsByTagName("input")[1].value;
+  // let searchTermCatagory = form.getElementsByTagName("input")[2].value;
   // Create Regular Expression
   let searchRegEx = new RegExp(searchTerm, "i");
-  let searchRegEx2 = new RegExp(searchTermKey, "i");
+  // let searchRegEx2 = new RegExp(searchTermKey, "i");
 
 
   // Fetch data to search from
@@ -25,6 +26,7 @@ async function searchProducts() {
       // Render items that matched
       document.getElementById("li-items").innerHTML = "";
       result.forEach((product) => createsearchItem(product));
+      
     } 
     
     else {
