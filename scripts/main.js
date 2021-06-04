@@ -21,17 +21,20 @@ function createmainItem(article) {
   const listitem = `<li>
  
   <div class="article-card">
+  <div class="art-cont">
   <h2 class="article-title">${article.title}</h2>
+  <hr/>
   <div class="article-cont">
   <img src="${article.urlToImage}" class="fakeimg" />
   <div class="description">
   <h5>${article.description}</h5>
-  <a href="${article.url}" target="_blank"><button>Read More</button>
+  <a href="${article.url}" target="_blank"><button>Read More</button></a>
   
   </div>
   
   </div>
-  <p> By:${article.author}</p>
+  <p style="font-size:small"> By:${article.author}</p>
+  </div>
     </div>
    
  </li>`;
@@ -42,13 +45,24 @@ function createmainItem(article) {
 // search items
 function createsearchItem(article) {
   const listitem = `<li>
+ 
   <div class="article-card">
-  <h2>${article.title}</h2>
-  <p> By:${article.author}</p>
-      <h5>${article.description}</h5>
-      <img src="${article.urlToImage}" class="fakeimg" style="height:200px;"/>
-      <a href="${article.url}" target="_blank"><button>Read More</button>
+  <div class="art-cont">
+  <h2 class="article-title">${article.title}</h2>
+  <hr/>
+  <div class="article-cont">
+  <img src="${article.urlToImage}" class="fakeimg" />
+  <div class="description">
+  <h5>${article.description}</h5>
+  <a href="${article.url}" target="_blank"><button>Read More</button></a>
+  
+  </div>
+  
+  </div>
+  <p style="font-size:small"> By:${article.author}</p>
+  </div>
     </div>
+   
  </li>`;
   let toplist = document.getElementById("li-items");
   console.log("Hello");
